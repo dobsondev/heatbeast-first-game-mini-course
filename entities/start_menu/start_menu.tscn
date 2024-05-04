@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://ujuyen5m6cj7"]
+
+[ext_resource type="Script" path="res://entities/start_menu/start_menu.gd" id="1_i8ycy"]
+[ext_resource type="FontFile" uid="uid://qf04dsjjvq60" path="res://assets/pixel_rpg.ttf" id="1_nnpnr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vw6g7"]
+line_spacing = 2.0
+font = ExtResource("1_nnpnr")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qudhy"]
+line_spacing = 2.0
+font = ExtResource("1_nnpnr")
+font_size = 8
+
+[node name="StartMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_i8ycy")
+metadata/_edit_lock_ = true
+
+[node name="PlayLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -11.5
+offset_right = 73.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Enter To Play"
+label_settings = SubResource("LabelSettings_vw6g7")
+
+[node name="MovementLabel" type="Label" parent="."]
+layout_mode = 1
+offset_right = 128.0
+offset_bottom = 64.0
+text = "Move with
+WASD"
+label_settings = SubResource("LabelSettings_qudhy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MovementLabel2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 64.0
+grow_horizontal = 0
+text = "Dodge the
+Blades"
+label_settings = SubResource("LabelSettings_qudhy")
+horizontal_alignment = 1
+vertical_alignment = 1

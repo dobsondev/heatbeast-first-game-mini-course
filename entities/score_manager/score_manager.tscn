@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://ntyv7jmpj3ag"]
+
+[ext_resource type="Script" path="res://entities/score_manager/score_manager.gd" id="1_0syog"]
+[ext_resource type="FontFile" uid="uid://qf04dsjjvq60" path="res://assets/pixel_rpg.ttf" id="1_55fm0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e0t8d"]
+line_spacing = 2.0
+font = ExtResource("1_55fm0")
+font_size = 8
+
+[node name="ScoreManager" type="Node"]
+script = ExtResource("1_0syog")
+
+[node name="SawCountLabel" type="Label" parent="."]
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 64.0
+text = "Blades
+0"
+label_settings = SubResource("LabelSettings_e0t8d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_right = 48.0
+offset_bottom = -28.0
+grow_vertical = 0
+text = "Highscore
+0"
+label_settings = SubResource("LabelSettings_e0t8d")
+horizontal_alignment = 1
+vertical_alignment = 1
